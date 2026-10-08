@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demonstração de Tabelas</title>
+
+        <style>
+            * {
+                margin: 0 px;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            table {
+                width: 80%; /* Define a largura da tabela como 80% da largura da tela */
+                margin: 20px auto; /* Centraliza a tabela horizontalmente */
+                border-collapse: collapse; /* Remove os espaços entre as células da tabela */
+            }
+
+            th, td {
+                border: 1px solid black; /* Adiciona uma borda às células da tabela */
+                padding: 10px; /* Adiciona um espaçamento interno às células da tabela */
+                text-align: left; /* Alinha o texto à esquerda nas células da tabela */
+            }
+
+            th {
+                background-color: lightgray; /* Define a cor de fundo das células de cabeçalho */
+            }
+
+            caption {
+                caption-side: top; /* Define a posição do título da tabela */
+                font-weight: bold; /* Define o peso da fonte do título da tabela */
+                margin-bottom: 10px; /* Adiciona uma margem inferior ao título da tabela */
+            }
+        </style>
+    </head>
+    <body>
+        <table> <!-- A tag <table> é usada para criar uma tabela. -->
+            <caption> <!-- A tag <caption> é usada para fornecer um título para a tabela. -->
+                Tabela de Exemplo
+            </caption>
+            <thead> <!-- A tag <thead> é usada para agrupar o cabeçalho da tabela. -->
+                <tr> <!-- A tag <tr> é usada para definir uma linha na tabela. -->
+                    <th>Nome</th> <!-- A tag <th> é usada para definir uma célula de cabeçalho na tabela. -->
+                    <th>Idade</th>
+                    <th>Cidade</th>
+                </tr>
+            </thead>
+            <tbody> <!-- A tag <tbody> é usada para agrupar o corpo da tabela. -->
+                <tr>
+                    <td>Alice</td> <!-- A tag <td> é usada para definir uma célula de dados na tabela. -->
+                    <td>30</td>
+                    <td>São Paulo</td>
+                </tr>
+                <tr>
+                    <td>Bob</td>
+                    <td>25</td>
+                    <td>Rio de Janeiro</td>
+                </tr>
+                <tr>
+                    <td>Charlie</td>
+                    <td>35</td>
+                    <td>Belo Horizonte</td>
+                </tr>
+            </tbody>
+            <tfoot> <!-- A tag <tfoot> é usada para agrupar o rodapé da tabela. -->
+                <tr>
+                    <td colspan="3"> <!-- O atributo colspan é usado para mesclar células horizontalmente. -->
+                        Total de Pessoas: 3
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+
+</html>

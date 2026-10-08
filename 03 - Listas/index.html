@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demonstração de Listas</title>
+
+        <style>
+            * {
+                margin: 0 px;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 20px; /* Adiciona um espaçamento entre as listas */
+            }
+
+            nav ol, nav ul {
+                display: flex;
+                justify-content: center;
+                background-color: lightgray;
+                list-style: none; /* Remove os marcadores da lista */
+            }
+
+            nav a {
+                text-decoration: none;
+                color: black;
+                font-family: Arial, sans-serif; /* Define a fonte do texto */
+                padding: 0px; /* Adiciona um espaçamento interno ao redor do link */
+                margin: 10px; /* Adiciona uma margem horizontal entre os itens da lista */
+            }
+
+            nav ul li {
+                font-family: Arial, sans-serif; /* Define a fonte do texto */
+                padding: 0px; /* Adiciona um espaçamento interno ao redor do link */
+                margin: 10px; /* Adiciona uma margem horizontal entre os itens da lista */
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ol type="1" start="20"> <!-- A tag <ol> é usada para criar uma lista ordenada. O atributo type define o estilo da numeração. -->
+                <li><a href="#item1">Item 1</a></li>
+                <li><a href="#item2">Item 2</a></li>
+                <li><a href="#item3">Item 3</a></li>
+            </ol>
+
+            <ul> <!-- A tag <ul> é usada para criar uma lista não ordenada. -->
+                <li>Item A</li>
+                <li>Item B</li>
+                <li>Item C</li>
+            </ul>
+
+            <dl>
+                <dt>Termo 1</dt>
+                <dd>Definição do Termo 1</dd>
+                <dt>Termo 2</dt>
+                <dd>Definição do Termo 2</dd>
+            </dl>
+        </nav>
+    </body>
+
+</html>

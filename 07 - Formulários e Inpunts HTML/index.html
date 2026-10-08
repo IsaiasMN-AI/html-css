@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demonstração de Formulários</title>
+    </head>
+    <body>
+        <form action="#" method="post" target="_blank" autocomplete="off"> <!-- A tag <form> é usada para criar um formulário. -->
+            <!-- O atributo action define a URL para onde os dados do formulário serão enviados. 
+             O atributo method define o método HTTP usado para enviar os dados (GET ou POST). 
+             O atributo target define onde abrir a resposta do formulário (neste caso, em uma nova aba). 
+             O atributo autocomplete desativa o preenchimento automático dos campos do formulário. -->
+            <p>
+                <label for="nome">Nome:</label> <!-- A tag <label> é usada para definir um rótulo para um elemento de formulário. O atributo for associa o rótulo ao elemento de formulário correspondente. -->
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required> <!-- A tag <input> é usada para criar campos de entrada de dados. O atributo type define o tipo de campo, e o atributo placeholder fornece um texto de sugestão dentro do campo. -->
+            </p>
+
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="isaias@example.com" required> <!-- O atributo value define um valor padrão para o campo de entrada. -->
+            </p>
+
+            <p>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required> <!-- O atributo type="password" faz com que o texto digitado seja ocultado. -->
+            </p>
+
+            <p>
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" min="0" max="120"> <!-- O atributo min define o valor mínimo permitido, e o atributo max define o valor máximo permitido. -->
+            </p>
+
+            <p>
+                <label for="genero">Gênero:</label>
+                <select id="genero" name="genero"> <!-- A tag <select> é usada para criar uma lista suspensa. -->
+                    <option value="">Selecione</option> <!-- A tag <option> é usada para definir uma opção dentro da lista suspensa. -->
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="dev">Desenvolvedor?</label>
+                <input type="checkbox" id="dev" name="dev" value="sim"> <!-- A tag <input> com type="checkbox" cria uma caixa de seleção. O atributo value define o valor enviado quando a caixa está marcada. -->
+            </p>
+            <p>
+                <label for="trabalha">Trabalha?</label>
+                <input type="checkbox" id="trabalha" name="trabalha" value="sim">
+            </p>
+
+            <p>
+                <label for="sexo">Gênero:</label>
+                <br>
+                <label for="feminino">Feminino</label>
+                <input type="radio" id="feminino" name="sexo" value="feminino"> <!-- A tag <input> com type="radio" cria um botão de opção. Todos os botões de opção com o mesmo atributo name pertencem ao mesmo grupo, permitindo que apenas uma opção seja selecionada. -->
+                <br>
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="masculino" name="sexo" value="masculino">
+            </p>
+
+            <p>
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" value="2000-01-01"> <!-- A tag <input> com type="date" cria um campo de entrada para datas, permitindo que o usuário selecione uma data em um calendário. -->
+            </p>
+
+            <p>
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" value="12:00"> <!-- A tag <input> com type="time" cria um campo de entrada para hora, permitindo que o usuário selecione uma hora em um relógio. -->
+            </p>
+
+            <p>
+                <label for="datahora">Data e Hora:</label>
+                <input type="datetime-local" id="datahora" name="datahora" value="2023-01-01T00:00"> <!-- A tag <input> com type="datetime-local" cria um campo de entrada para data e hora, permitindo que o usuário selecione uma data e hora em um calendário. -->
+            </p>
+
+            <p>
+                <label for="cor">Cor:</label>
+                <input type="color" id="cor" name="cor" value="#000000"> <!-- A tag <input> com type="color" cria um campo de entrada para seleção de cor. -->
+            </p>
+
+            <p>
+                <label for="imagem">Imagem:</label>
+                <input type="file" id="imagem" name="imagem" accept="image/*" multiple> <!-- A tag <input> com type="file" cria um campo de entrada para upload de arquivos. O atributo accept especifica o tipo de arquivo permitido. -->
+            </p>
+
+            <p>
+                <label for="range">Faixa de Valores:</label>
+                <input type="range" id="range" name="range" min="0" max="100" value="50" step="1" list="valores"> <!-- A tag <input> com type="range" cria um campo de entrada para seleção de um valor dentro de uma faixa, permitindo que o usuário arraste um controle deslizante. -->
+                
+                <datalist id="valores"> <!-- A tag <datalist> é usada para fornecer uma lista de opções predefinidas para um campo de entrada. -->
+                    <option value="0">
+                    <option value="25">
+                    <option value="50">
+                    <option value="75">
+                    <option value="100">
+                </datalist>
+            </p>
+
+            <p>
+                <label for="select">Seleção:</label>
+                <select id="select" name="select" multiple> <!-- O atributo multiple permite que o usuário selecione várias opções. O atributo size define o número de opções visíveis na lista suspensa. -->
+                    <optgroup Label="Grupo 1">
+                        <option value="opcao1">Opção 1</option>
+                        <option value="opcao2">Opção 2</option>
+                    </optgroup>
+                    <optgroup Label="Grupo 2">
+                        <option value="opcao3">Opção 3</option>
+                        <option value="opcao4">Opção 4</option>
+                    </optgroup>
+                </select>
+            </p>
+
+            <p>
+                <label for="areatexto">Área de Texto:</label>
+                <textarea id="areatexto" name="areatexto" rows="4" cols="50" placeholder="Digite seu texto aqui..."></textarea> <!-- A tag <textarea> é usada para criar uma área de texto multilinha. O atributo rows define o número de linhas visíveis, e o atributo cols define o número de colunas visíveis. -->
+            </p>
+
+            <button type="reset">Limpar</button> <!-- O botão de reset limpa todos os campos do formulário. -->
+            <button type="submit">Enviar</button> <!-- O botão de envio envia os dados do formulário para o servidor. -->
+        </form>
+    </body>
+
+</html>
